@@ -1,6 +1,7 @@
 package com.thoughtworks.capability.gtb.demospringconfig;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
