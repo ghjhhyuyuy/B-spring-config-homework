@@ -14,15 +14,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@ActiveProfiles("test0")
-class DemoSpringConfigApplicationTests {
+@ActiveProfiles("test1")
+class DemoSpringConfigApplicationTests1 {
 	@Autowired
 	private MockMvc mockMvc;
 
+
 	@Test
-	void contextLoadsLessThan1() throws Exception {
+	void contextLoadsLessEquals1() throws Exception {
 		mockMvc.perform(get("/level"))
-				.andExpect(jsonPath("$", is("basic")))
+				.andExpect(jsonPath("$", is("advanced")))
 				.andExpect(status().isOk());
 	}
 
